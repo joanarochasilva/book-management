@@ -1,13 +1,16 @@
 import React from 'react'
+import LoginPage from '../components/LoginPage'
+import SignUpPage from '../components/SignUpPage'
+import Home from '../components/Home'
+import { Routes, Route } from 'react-router-dom'
 
 export default function AppRouter() {
   return (
-    <Router>
+
     <Routes>
-      <Route path="/login" element={<Auth />} />
-      <Route path="/livros" element={<LivrosList />} />
-      <Route path="/cadastro" element={<Auth />} />
+        <Route path="/" element={<Home/>}/>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/cadastro" element={<SignUpPage/>} />
     </Routes>
-  </Router>
   )
 }
